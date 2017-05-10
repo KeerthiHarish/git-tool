@@ -1,0 +1,8 @@
+<div class="members">
+  <h2>Members</h2>
+  {{#each members as |member|}}
+    {{#draggable-object content=member}}
+      {{name-card name=member.name}}
+    {{/draggable-object}}
+  {{/each}}
+</div>

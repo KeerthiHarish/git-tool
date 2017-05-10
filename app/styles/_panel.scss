@@ -1,0 +1,15 @@
+.panel {
+  &-body {
+    display: flex;
+    .personBlock {
+      padding: 5px;
+      .avatar {
+        margin-right: 5px;
+      }
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+}

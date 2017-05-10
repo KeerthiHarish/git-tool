@@ -1,5 +1,25 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="pageWrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md">
+        <div class="whiteContainer sidebarContainer paddingNone">
 
-{{outlet}}
+          <div class="sidebar">
+            {{members-container members=members}}
+          </div>
+          <div class="sidebarContainerContent">
+            <div class="pageHeader">
+              <h2 class="inline">Projects</h2>
+              <a href="#modal-dialog" class="btn btn-primary modal-toggle" data-toggle="modal"><i class="icon-trash"></i> New project</a>
+            </div>
+            {{projects-container projects=projects}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{modal-pane store=store}}
+

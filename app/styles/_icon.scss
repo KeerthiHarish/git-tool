@@ -1,0 +1,47 @@
+.personBlock{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  .avatar{
+    margin-right: 10px;
+  }
+  .userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .name{
+      color: $normalText;
+      line-height: 18px;
+    }
+  }
+}
+
+.userAvatar{
+  &.user32{
+    height: 32px;
+    .avatar{
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 11px;
+      @include rounded-corners(16px);
+    }
+  }
+  .avatar{
+    display: inline-block;
+    flex-shrink: 0;
+    color: #fff;
+    background: $blueText;
+    overflow: hidden;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    &.hasImage{
+      line-height: 0;
+      background: none;
+    }
+  }
+}

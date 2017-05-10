@@ -1,0 +1,19 @@
+{{#draggable-object-target action="addMember" project=project}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{project.name}}</h3>
+    </div>
+    <div class="panel-body">
+      {{#if project.projectMembers.length}}
+        {{ split-members members=project.projectMembers }}
+      {{else}}
+        No members added yet.
+      {{/if}}
+    </div>
+    {{#if project.description}}
+      <div class="panel-footer">{{project.description}}</div>
+    {{else}}
+      <div class="panel-footer">No Description available.</div>
+    {{/if}}
+  </div>
+{{/draggable-object-target}}
