@@ -2,9 +2,12 @@ body {
   background-color: $body !important;
 }
 
-
 .pageWrapper {
-  padding: 80px 75px 30px 75px;
+  padding: 30px 75px;
+}
+
+.heading {
+  color: $blueText;
 }
 
 .whiteContainer{
