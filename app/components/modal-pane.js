@@ -9,11 +9,17 @@ export default Ember.Component.extend({
   actions: {
     createProject() {
       let project = this.store.createRecord('project');
-      project.name= this.get('projectName');
-      project.description = this.get('projectDesc');
-      project.save().then(() => {
-        $("#modal-dialog").modal('hide')
-      })
+      if(this.get('projectName')) {
+        project.name= this.get('projectName');
+        project.description = this.get('projectDesc');
+        project.save().then(() => {
+          this.set('projectName', '');
+          this.set('projectDesc', '');
+          $("#modal-dialog").modal('hide')
+        })
+      } else {
+        alert("Pleas enter a project name");
+      }
     }
   }
 });
