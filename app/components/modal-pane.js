@@ -10,8 +10,8 @@ export default Ember.Component.extend({
 
   actions: {
     createProject() {
-      let project = this.store.createRecord('project');
       if(this.get('projectName')) {
+        let project = this.store.createRecord('project');
         project.name= this.get('projectName');
         project.description = this.get('projectDesc');
         project.save().then(() => {
