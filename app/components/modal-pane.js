@@ -6,6 +6,8 @@ export default Ember.Component.extend({
 
   tagName: "",
 
+  flashMessages: Ember.inject.service(),
+
   actions: {
     createProject() {
       let project = this.store.createRecord('project');
@@ -15,10 +17,11 @@ export default Ember.Component.extend({
         project.save().then(() => {
           this.set('projectName', '');
           this.set('projectDesc', '');
-          $("#modal-dialog").modal('hide')
+          $("#modal-dialog").modal('hide');
+          this.get('flashMessages').success('Project created successfully!');
         })
       } else {
-        alert("Pleas enter a project name");
+        this.get('flashMessages').danger('Please enter a project name');
       }
     }
   }

@@ -8,3 +8,12 @@
   -webkit-box-shadow: $fmt;
           box-shadow: $fmt;
 }
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin alert-variant($background, $body-color) {
+  background-color: $background !important;
+  color: $body-color !important;
+}

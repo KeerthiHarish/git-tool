@@ -1,6 +1,32 @@
+// Global variables
+
 $lightText: #AAB0B0;
 $darkText: #384040;
 $body: #F8F9FB;
 $normalText: #5D6464;
 $lightText: #AAB0B0;
 $blueText: #337ab7;
+$border-radius:          .25rem !default;
+$border-width: 1px !default;
+$white-primary:        #FFFFFF !default;
+$green-primary:        #7EBA41 !default;
+$red-light:            #FB4042 !default;
+
+// Alerts variables
+// Alerts Variables
+//--------------------------
+
+// Font styles
+$alert-font-size:                  $font-size-small !default;
+$alert-font-weight:                600 !default;
+$alert-font-color:                 $white-primary !default;
+
+
+// Background Styles
+$alert-success-background-color:   $green-primary !default;
+$alert-danger-background-color:    $red-light !default;
+
+$alert-padding-x:             1.25rem !default;
+$alert-padding-y:             .75rem !default;
+$alert-border-radius:         $border-radius !default;
+$alert-border-width:          $border-width !default;
